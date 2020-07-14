@@ -1,4 +1,4 @@
-### Hi there 👋
+### ¡Hola! 👋
 
 <!--
 **ChristianECG/ChristianECG** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,3 +14,18 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+Soy un desarrollador de software full-stack, con al menos 5 años de experiencia trabajando en lenguajes como Java, PHP, Kotlin y Python.
+Todo aquél que quiera aprender algo, y se esfuerza por hacerlo, tiene mis respetos.
+
+🔭 Actualmente estoy trabajando como desarrollador y consultor independiente en Hidalgo, México.
+
+🌱 Estoy aprendiendo acerca de React JS y React Native *(Nunca parar de aprender)*
+
+👯 Si lo deseas, podemos crear algo juntos, escríbeme a contacto@christianecg.com
+
+📖 También puedes leer mi blog en https://christianecg.com/blog
+
+💬 ¡Soy del grupo de quienes le añadieron el π a la pizza!
+
+⚡ También soy escritor y crítico de libros y cine.
