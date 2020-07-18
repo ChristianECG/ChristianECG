@@ -16,7 +16,7 @@ Here are some ideas to get you started:
 -->
 
 Soy un desarrollador de software full-stack, con al menos 5 años de experiencia trabajando en lenguajes como Java, PHP, Kotlin y Python.
-Todo aquél que quiera aprender algo, y se esfuerza por hacerlo, tiene mis respetos.
+En general, admiro a la gente que insiste en encontrar formas de emocionarse.
 
 🔭 Actualmente estoy trabajando como desarrollador y consultor independiente en Hidalgo, México.
 
