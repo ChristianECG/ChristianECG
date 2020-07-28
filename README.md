@@ -35,6 +35,6 @@ Here are some ideas to get you started:
 </td>
 <td>
   <h2 align=center> Christian Elías 👨‍💻</h1>
-  <img src='https://github.com/ChristianECG/ChristianECG/blob/master/icon.png' width=80% align=center>
+  <p align=center><img src='https://github.com/ChristianECG/ChristianECG/blob/master/icon.png' width=80%></p>
   <p align=center><b>contacto@christianecg.com</b></p>
 </td></tr></table>
