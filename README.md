@@ -34,5 +34,5 @@ En general, admiro a la gente que insiste en encontrar formas de emocionarse.
 
 </td>
 <td>
-<img src='/icon.png'>
+<img src='https://github.com/ChristianECG/ChristianECG/blob/master/icon.png'>
 </td></tr></table>
