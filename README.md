@@ -15,6 +15,8 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+<table><tr><td>
+  
 Soy un desarrollador de software full-stack, con al menos 5 años de experiencia trabajando en lenguajes como Java, PHP, Kotlin y Python.
 En general, admiro a la gente que insiste en encontrar formas de emocionarse.
 
@@ -29,3 +31,8 @@ En general, admiro a la gente que insiste en encontrar formas de emocionarse.
 💬 ¡Soy del grupo de quienes le añadieron el π a la pizza!
 
 ⚡ También soy escritor y crítico de libros y cine.
+
+</td>
+<td>
+<img src='/icon.png'>
+</td></tr></table>
