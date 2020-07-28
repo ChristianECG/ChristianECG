@@ -16,6 +16,11 @@ Here are some ideas to get you started:
 -->
 
 <table><tr><td>
+  <h2 align=center> Christian Elías 👨‍💻</h1>
+  <p align=center><img src='https://github.com/ChristianECG/ChristianECG/blob/master/icon.png' width=80%></p>
+  <p align=center><b>contacto@christianecg.com</b></p>
+</td>
+<td>
   
   <p align=justify>Soy un desarrollador de software full-stack, con al menos 5 años de experiencia trabajando en lenguajes como Java, PHP, Kotlin y Python.
   En general, admiro a la gente que insiste en encontrar formas de emocionarse.</p>
@@ -32,9 +37,4 @@ Here are some ideas to get you started:
 
   <p align=justify>⚡También soy escritor y crítico de libros y cine.</p>
 
-</td>
-<td>
-  <h2 align=center> Christian Elías 👨‍💻</h1>
-  <p align=center><img src='https://github.com/ChristianECG/ChristianECG/blob/master/icon.png' width=80%></p>
-  <p align=center><b>contacto@christianecg.com</b></p>
 </td></tr></table>
