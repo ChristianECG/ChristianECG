@@ -20,17 +20,17 @@ Here are some ideas to get you started:
   <p align=justify>Soy un desarrollador de software full-stack, con al menos 5 años de experiencia trabajando en lenguajes como Java, PHP, Kotlin y Python.
   En general, admiro a la gente que insiste en encontrar formas de emocionarse.</p>
 
-  <p align=justify>🔭 Actualmente estoy trabajando como desarrollador y consultor independiente en Hidalgo, México.</p>
+  <p align=justify>🔭Actualmente estoy trabajando como desarrollador y consultor independiente en Hidalgo, México.</p>
 
-  <p align=justify>🌱 Estoy aprendiendo acerca de React JS y React Native <i>(Nunca parar de aprender)</i> </p>
+  <p align=justify>🌱Estoy aprendiendo acerca de React JS y React Native <i>(Nunca parar de aprender)</i> </p>
 
-  <p align=justify>👯 Si lo deseas, podemos crear algo juntos, escríbeme a contacto@christianecg.com</p>
+  <p align=justify>👯Si lo deseas, podemos crear algo juntos, escríbeme a contacto@christianecg.com</p>
 
-  <p align=justify>📖 También puedes leer mi blog en https://christianecg.com/blog</p>
+  <p align=justify>📖También puedes leer mi blog en https://christianecg.com/blog</p>
 
-  <p align=justify>💬 ¡Soy del grupo de quienes le añadieron el π a la pizza!</p>
+  <p align=justify>💬¡Soy del grupo de quienes le añadieron el π a la pizza!</p>
 
-  <p align=justify>⚡ También soy escritor y crítico de libros y cine.</p>
+  <p align=justify>⚡También soy escritor y crítico de libros y cine.</p>
 
 </td>
 <td>
