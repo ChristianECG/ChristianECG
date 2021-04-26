@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 <img align=right src=img.png width=50%>
 
-<p align=justify>Soy un desarrollador de software backend, trabajando en PHP y JS.
+<p align=justify>Soy un desarrollador de software frontend, contribuyendo y participando en comunidades.
 En general, admiro a la gente que insiste en encontrar formas de emocionarse.</p>
 
 <p align=justify>🌱 Estoy aprendiendo acerca de React <i>(Nunca parar de aprender)</i> </p>
