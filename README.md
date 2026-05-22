@@ -1,14 +1,14 @@
 # Christian Elías Cruz González
 
-**Senior Frontend Engineer** · México 🇲🇽
-Performance · IoT Data Visualization · Scalable UI
+**Senior Software Engineer** · México 🇲🇽
+Full-Stack · AI-Integrated · Performance · Real-time Systems
 
 > 150K users run my code every day.
 > None of them know it exists. That's the point.
 
 ---
 
-Frontend engineer with 5+ years building applications that scale without losing the details. I specialize in performance optimization, real-time data visualization, and frontend architecture for high-traffic products.
+Software engineer with 5+ years building applications that scale without losing the details. I specialize in performance optimization, real-time data visualization, and frontend architecture for high-traffic products — and I build the full stack underneath when the product needs it.
 
 ---
 
@@ -18,31 +18,34 @@ Frontend engineer with 5+ years building applications that scale without losing 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React Native](https://img.shields.io/badge/React%20Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat-square&logo=astro&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=flat-square&logo=d3dotjs&logoColor=white)
 ![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
 ![ECharts](https://img.shields.io/badge/ECharts-AA344D?style=flat-square&logo=apache&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
 ![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
 ---
 
 ### ⚡ Currently
 
 - 🔭 &nbsp;Architecting real-time dashboards that handle millions of IoT events
-- 🧪 &nbsp;Obsessing over rendering performance and browser internals
-- 🎙️ &nbsp;Preparing talks for upcoming tech conferences
-- ✍️ &nbsp;Writing about software (in Spanish) at [christianecg.com/blog](https://christianecg.com/blog)
+- 🏗️ &nbsp;Building full-stack infrastructure for my own products — analytics, deployment automation, secrets vault
+- 🤖 &nbsp;Integrating AI tooling into my daily engineering workflow
+- 🎙️ &nbsp;Speaking at tech conferences on frontend, AI, and open source
 
 ---
 
-### ✍️ Writing
+### 🚀 Projects
 
-- 📄 &nbsp;[El desarrollo de software es una de las profesiones más peligrosas del mundo](https://christianecg.com/blog/el-desarrollo-de-software-profesion-peligrosa)
-- 📄 &nbsp;[Por qué tu sitio web debería funcionar sin JavaScript](https://christianecg.com/blog/sitio-web-sin-javascript)
-- 📄 &nbsp;[En ocasiones vale la pena reinventar la rueda](https://christianecg.com/blog/reinventar-la-rueda)
-- 📄 &nbsp;[Querido programador junior](https://christianecg.com/blog/querido-programador-junior)
-- 📄 &nbsp;[Necesitas aprender a hacer pruebas unitarias](https://christianecg.com/blog/pruebas-unitarias)
+- **[christianecg.com](https://christianecg.com)** — Personal portfolio and blog · Astro · Pagefind · Satori
+- **[DocPipeline](https://docpipeline.sbs)** — Real-time document pipeline dashboard · Next.js · SSE · WebSocket
+- **[Avelor](https://avelor.es)** — Full-stack back-office platform · Node.js · PHP · MySQL · Tailscale
+- **[Octa.page](https://octa.page)** — Public technical notebook · Astro
+- **[CatolicMixquia](https://apps.apple.com/us/app/catolicmixquia/id6469672864)** — Mobile app · React Native · iOS · Android
 
 ---
 
