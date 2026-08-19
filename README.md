@@ -1,6 +1,6 @@
 # Christian Elías Cruz González
 
-**Senior Software Engineer** · México 🇲🇽
+**Senior Software Engineer at Capital One** · Hybrid · Mexico City 🇲🇽
 Frontend Architecture · Real-time Systems · Data Visualization · Developer Tools
 
 > 150K users ran my code every day.
@@ -8,9 +8,9 @@ Frontend Architecture · Real-time Systems · Data Visualization · Developer To
 
 ---
 
-Software engineer obsessed with performance. Four years optimizing the frontend of an IoT platform with 150K+ active users — real-time WebSocket data, charts that never drop a frame, design systems that scale. If the user notices the UI, something went wrong.
+Software engineer obsessed with performance. Currently building products at Capital One. Previously spent four years optimizing the frontend of an IoT platform with 150K+ active users — real-time WebSocket data, charts that never drop a frame, design systems that scale. If the user notices the UI, something went wrong.
 
-Now I build small, sharp tools for developers.
+Outside of work, I build small, sharp tools for developers and publish the systems behind them.
 
 ---
 
@@ -36,6 +36,7 @@ Now I build small, sharp tools for developers.
 
 ### ⚡ Currently
 
+- 💼 &nbsp;Building software at **[Capital One](https://www.capitalone.com/tech/)** in a hybrid setup in Mexico City
 - 🔨 &nbsp;Shipping **[@avelor](https://avelor.es)** — a suite of 17 CLI tools for developers, on npm
 - 🎨 &nbsp;Running **[creu](https://creu.cat)** — my design & code studio
 - 🤖 &nbsp;Building MCP servers and wiring AI tooling into the engineering workflow
