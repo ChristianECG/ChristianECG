@@ -1,0 +1,161 @@
+#!/usr/bin/env node
+// Badges for this README, in the palette of the live cards at clacks.creu.cat (paper by day, midnight by night).
+//
+//   ./badge <name> <title> <item>...
+//
+// One call, one pill: an optional title (pass "" for none) and one or more items. An item is "Label" or
+// "logo:Label", where logo is a file in badges/icons/ or else a Simple Icons slug (https://simpleicons.org),
+// drawn in one color so every brand sits in the palette. Writes badges/<name>-light.svg and badges/<name>-dark.svg and prints the
+// <picture> to paste. Examples:
+//
+//   ./badge frontend "Frontend" typescript:TypeScript react:React nextdotjs:Next.js
+//   ./badge email "" gmail:contacto@christianecg.com
+//
+// Logos are fetched once per run from a pinned Simple Icons release; the SVGs are committed, so the README
+// depends on nothing at view time.
+
+const { existsSync, mkdirSync, readFileSync, writeFileSync } = require("node:fs");
+const { join } = require("node:path");
+const assert = require("node:assert/strict");
+
+const ICONS = "https://cdn.jsdelivr.net/npm/simple-icons@16.35.0/icons";
+const OUT = join(__dirname, "badges");
+// Logos of our own, or from other collections, win over Simple Icons: badges/icons/<slug>.svg, any square viewBox.
+const LOCAL = join(OUT, "icons");
+
+const PALETTE = {
+  light: { bg: "#f4efe6", line: "#e0d6c3", fg: "#2a241c", muted: "#75695a" },
+  dark: { bg: "#1c2230", line: "#2e3648", fg: "#ebe6dc", muted: "#9ba3b4" },
+};
+
+const H = 32;
+const PAD = 14;
+const ICON = 14;
+const GAP = 6; // Between a logo and its label.
+const SEP = 16; // Between items.
+
+// An SVG shown as an image cannot measure text, and every viewer has a different system font. So widths are
+// estimated per character and then enforced with textLength (lengthAdjust="spacing"): the browser fits the
+// text to exactly that width by nudging letter spacing, so the layout holds in any font. The estimate only
+// has to be close for the nudge to stay invisible.
+const width = (s, px) =>
+  [...s].reduce((w, c) => w + (/[MW@]/.test(c) ? 0.86 : /[IJ]/.test(c) ? 0.3 : /[A-Z]/.test(c) ? 0.68 : /[0-9]/.test(c) ? 0.6 : /[mw]/.test(c) ? 0.82 : /[ .,:·–-]/.test(c) ? 0.28 : /[ijlrtf]/.test(c) ? 0.3 : 0.55) * px, 0);
+const caps = (s) => [...s].reduce((w, c) => w + (c === " " ? 4 : /[MW]/.test(c) ? 10.4 : /[CDGNOQ]/.test(c) ? 8.9 : /[IJ]/.test(c) ? 4.6 : 8), 0); // The title: 10.5px uppercase, letter-spaced.
+const fitted = (n) => `textLength="${n.toFixed(1)}" lengthAdjust="spacing"`;
+
+const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+
+/** "react:React Native" → { logo: "react", label: "React Native" }. A label with spaces before a colon is just text. */
+function item(arg) {
+  const m = /^([a-z0-9]+):(.+)$/.exec(arg);
+  return m ? { logo: m[1], label: m[2] } : { label: arg };
+}
+
+/** A logo's paths and the size of its square viewBox, from badges/icons/ first, then Simple Icons. */
+async function logo(slug) {
+  const local = join(LOCAL, `${slug}.svg`);
+  let svg;
+  if (existsSync(local)) svg = readFileSync(local, "utf8");
+  else {
+    const r = await fetch(`${ICONS}/${slug}.svg`);
+    if (!r.ok) throw new Error(`no logo "${slug}": not in badges/icons/ nor in Simple Icons (${r.status}). Check the slug at https://simpleicons.org, add badges/icons/${slug}.svg, or drop the logo: "Label".`);
+    svg = await r.text();
+  }
+  return parseLogo(slug, svg);
+}
+
+function parseLogo(slug, svg) {
+  const box = /viewBox="0 0 ([\d.]+) ([\d.]+)"/.exec(svg);
+  if (!box || box[1] !== box[2]) throw new Error(`logo "${slug}" needs a square viewBox starting at 0 0`);
+  const paths = [...svg.matchAll(/<path([^>]*?)\sd="([^"]+)"/g)].map((m) => ({
+    d: m[2],
+    evenodd: /fill-rule="evenodd"/.test(m[1]),
+    // In one color, shapes that overlap (deck.gl's layers) are told apart by opacity.
+    opacity: /fill-opacity="([\d.]+)"/.exec(m[1])?.[1],
+  }));
+  if (!paths.length) throw new Error(`logo "${slug}" has no <path>`);
+  return { size: Number(box[1]), paths };
+}
+
+/** The pill, for one palette. Pure: logos already fetched. */
+function render(title, items, paths, c) {
+  let x = PAD;
+  let body = "";
+  if (title) {
+    body += `<text x="${x}" y="20.5" font-size="10.5" font-weight="600" ${fitted(caps(title) - 1)} fill="${c.muted}">${esc(title.toUpperCase())}</text>`;
+    x += caps(title) + 8;
+    body += `<line x1="${x}" y1="9" x2="${x}" y2="${H - 9}" stroke="${c.line}" stroke-width="1.5"/>`;
+    x += 12;
+  }
+  items.forEach((it, i) => {
+    if (i > 0) {
+      body += `<circle cx="${x + SEP / 2}" cy="${H / 2}" r="1.3" fill="${c.muted}"/>`;
+      x += SEP;
+    }
+    if (it.logo) {
+      const l = paths[it.logo];
+      body += `<g transform="translate(${x} ${(H - ICON) / 2}) scale(${ICON / l.size})" fill="${c.fg}" opacity="0.85">${l.paths.map((p) => `<path d="${p.d}"${p.evenodd ? ' fill-rule="evenodd"' : ""}${p.opacity ? ` fill-opacity="${p.opacity}"` : ""}/>`).join("")}</g>`;
+      x += ICON + GAP;
+    }
+    body += `<text x="${x}" y="20.5" font-size="12" ${fitted(width(it.label, 12))} fill="${c.fg}">${esc(it.label)}</text>`;
+    x += width(it.label, 12);
+  });
+  const w = Math.ceil(x + PAD);
+  const alt = [title, items.map((i) => i.label).join(", ")].filter(Boolean).join(": ");
+  return {
+    alt,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${H}" viewBox="0 0 ${w} ${H}" role="img" aria-label="${esc(alt)}">
+  <title>${esc(alt)}</title>
+  <style>text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }</style>
+  <rect x="0.5" y="0.5" width="${w - 1}" height="${H - 1}" rx="${H / 2}" fill="${c.bg}" stroke="${c.line}"/>
+  ${body}
+</svg>
+`,
+  };
+}
+
+function selfTest() {
+  assert.deepEqual(item("react:React Native"), { logo: "react", label: "React Native" });
+  assert.deepEqual(item("deck.gl"), { label: "deck.gl" });
+  assert.deepEqual(item("Keynote speaker: 3 congresses"), { label: "Keynote speaker: 3 congresses" });
+  const one = render("", [{ label: "a<b" }], {}, PALETTE.light);
+  assert.match(one.svg, /a&lt;b/);
+  assert.doesNotMatch(one.svg, /<line|<circle/); // No title, one item: no divider, no dots.
+  const logoX = parseLogo("x", '<svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h1"/><path fill-opacity="0.4" d="M2 2h1"/></svg>');
+  assert.deepEqual(logoX, { size: 16, paths: [{ d: "M0 0h1", evenodd: true, opacity: undefined }, { d: "M2 2h1", evenodd: false, opacity: "0.4" }] });
+  assert.throws(() => parseLogo("y", '<svg viewBox="0 0 24 16"><path d="M0 0"/></svg>'), /square viewBox/);
+  const group = render("Stack", [{ logo: "x", label: "A" }, { label: "B" }], { x: logoX }, PALETTE.dark);
+  assert.match(group.svg, /scale\(0\.875\)/); // 14px logo from a 16-unit box.
+  assert.equal((group.svg.match(/<circle/g) ?? []).length, 1);
+  assert.match(group.svg, /STACK/);
+  assert.equal(group.alt, "Stack: A, B");
+  assert.match(group.svg, /textLength="[\d.]+" lengthAdjust="spacing"/); // Every label is fitted, whatever the font.
+  console.log("ok");
+}
+
+async function main([name, title, ...args]) {
+  if (name === "--test") return selfTest();
+  if (!name || title === undefined || !args.length || !/^[a-z0-9-]+$/.test(name)) {
+    console.error('usage: ./badge <name> <title> <item>...   (title "" for none; item "Label" or "logo:Label"; name in a-z, 0-9, -)');
+    process.exit(2);
+  }
+  const items = args.map(item);
+  const slugs = [...new Set(items.filter((i) => i.logo).map((i) => i.logo))];
+  const paths = Object.fromEntries(await Promise.all(slugs.map(async (s) => [s, await logo(s)])));
+  mkdirSync(OUT, { recursive: true });
+  let alt = "";
+  for (const theme of ["light", "dark"]) {
+    const r = render(title, items, paths, PALETTE[theme]);
+    writeFileSync(join(OUT, `${name}-${theme}.svg`), r.svg);
+    alt = r.alt;
+  }
+  console.log(`<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="badges/${name}-dark.svg">
+  <img src="badges/${name}-light.svg" alt="${esc(alt)}">
+</picture>`);
+}
+
+main(process.argv.slice(2)).catch((e) => {
+  console.error(e.message);
+  process.exit(1);
+});

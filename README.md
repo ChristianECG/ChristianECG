@@ -16,21 +16,10 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 
 ### 🛠️ Stack
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat-square&logo=astro&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![ECharts](https://img.shields.io/badge/ECharts-AA344D?style=flat-square&logo=apache&logoColor=white)
-![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=flat-square&logo=d3dotjs&logoColor=white)
-![deck.gl](https://img.shields.io/badge/deck.gl-000000?style=flat-square&logo=deckdotgl&logoColor=white)
-![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?style=flat-square&logo=reactquery&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=claude&logoColor=white)
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/frontend-dark.svg"><img src="badges/frontend-light.svg" alt="Frontend: TypeScript, React, React Native, Next.js, Astro"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/backend-dark.svg"><img src="badges/backend-light.svg" alt="Backend: Node.js, SQLite, MySQL"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/dataviz-dark.svg"><img src="badges/dataviz-light.svg" alt="Data viz: ECharts, D3.js, deck.gl"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/tooling-dark.svg"><img src="badges/tooling-light.svg" alt="Tooling: TanStack Query, Jest, ESLint, Claude"></picture>
 
 ---
 
@@ -82,13 +71,9 @@ Everything I run lives on one server, backed up every night to an encrypted, wri
 
 ### 🎤 Research & community
 
-[![IEEE Xplore](https://img.shields.io/badge/IEEE%20Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/9619732)
-&nbsp;*Security Issues of a Decentralized Blockchain-Based Messaging System* · 2021
-
-![Speaker](https://img.shields.io/badge/🎙️%20Keynote%20Speaker-3%20international%20congresses-111?style=flat-square)  
-![Google DSC](https://img.shields.io/badge/Google%20DSC%20Lead-2020–2021-4285F4?style=flat-square&logo=google&logoColor=white)  
-![TV](https://img.shields.io/badge/📺%20National%20TV-2%20appearances-111?style=flat-square)  
-![Mentor](https://img.shields.io/badge/🤝%20Mentor-tech%20communities-111?style=flat-square)
+<a href="https://ieeexplore.ieee.org/document/9619732"><picture><source media="(prefers-color-scheme: dark)" srcset="badges/paper-dark.svg"><img src="badges/paper-light.svg" alt="Paper: Security Issues of a Decentralized Blockchain-Based Messaging System, 2021"></picture></a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/speaking-dark.svg"><img src="badges/speaking-light.svg" alt="Speaking: Keynote at 3 international congresses, 2 national TV appearances"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/community-dark.svg"><img src="badges/community-light.svg" alt="Community: Google DSC Lead 2020–2021, Mentor in tech communities"></picture>
 
 ---
 
@@ -100,7 +85,7 @@ Everything I run lives on one server, backed up every night to an encrypted, wri
 </picture>
 <br><br>
 
-[![Portfolio](https://img.shields.io/badge/christianecg.com-000000?style=flat-square&logo=astro&logoColor=white)](https://christianecg.com)
-[![Creu](https://img.shields.io/badge/creu.cat-1A1A1A?style=flat-square)](https://creu.cat)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christianeliascg/)
-[![Email](https://img.shields.io/badge/contacto%40christianecg.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:contacto@christianecg.com)
+<a href="https://christianecg.com"><picture><source media="(prefers-color-scheme: dark)" srcset="badges/site-dark.svg"><img src="badges/site-light.svg" alt="christianecg.com"></picture></a>
+<a href="https://creu.cat"><picture><source media="(prefers-color-scheme: dark)" srcset="badges/creu-dark.svg"><img src="badges/creu-light.svg" alt="creu.cat"></picture></a>
+<a href="https://www.linkedin.com/in/christianeliascg/"><picture><source media="(prefers-color-scheme: dark)" srcset="badges/linkedin-dark.svg"><img src="badges/linkedin-light.svg" alt="LinkedIn"></picture></a>
+<a href="mailto:contacto@christianecg.com"><picture><source media="(prefers-color-scheme: dark)" srcset="badges/email-dark.svg"><img src="badges/email-light.svg" alt="contacto@christianecg.com"></picture></a>
