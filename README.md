@@ -94,6 +94,11 @@ Everything I run lives on one server, backed up every night to an encrypted, wri
 
 ### 🌐 Find me
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://clacks.creu.cat/clock.svg?theme=dark">
+  <img src="https://clacks.creu.cat/clock.svg?theme=light" alt="The time in Mexico City, and whether I am probably around" width="440">
+</picture>
+
 [![Portfolio](https://img.shields.io/badge/christianecg.com-000000?style=flat-square&logo=astro&logoColor=white)](https://christianecg.com)
 [![Creu](https://img.shields.io/badge/creu.cat-1A1A1A?style=flat-square)](https://creu.cat)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christianeliascg/)
