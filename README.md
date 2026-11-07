@@ -69,6 +69,17 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 
 ---
 
+### 🏦 Self-hosted
+
+Everything I run lives on one server, backed up every night to an encrypted, write-locked vault and restored once a week to prove it still works. The vault keeps its own ledger:
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://clacks.creu.cat/vault713.svg?theme=dark">
+  <img src="https://clacks.creu.cat/vault713.svg?theme=light" alt="Vault 713: the last nightly backup and restore drill" width="480">
+</picture>
+
+---
+
 ### 🎤 Research & community
 
 [![IEEE Xplore](https://img.shields.io/badge/IEEE%20Xplore-00629B?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/9619732)
