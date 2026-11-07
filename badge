@@ -5,11 +5,14 @@
 //
 // One call, one pill: an optional title (pass "" for none) and one or more items. An item is "Label" or
 // "logo:Label", where logo is a file in badges/icons/ or else a Simple Icons slug (https://simpleicons.org),
-// drawn in one color so every brand sits in the palette. Writes badges/<name>-light.svg and badges/<name>-dark.svg and prints the
-// <picture> to paste. Examples:
+// drawn in one color so every brand sits in the palette. Writes badges/<name>-light.svg and
+// badges/<name>-dark.svg and prints the <picture> to paste. Examples:
 //
 //   ./badge frontend "Frontend" typescript:TypeScript react:React nextdotjs:Next.js
 //   ./badge email "" gmail:contacto@christianecg.com
+//
+// Every badge in the README is also a line of badges/badges.txt; `./badge --all` regenerates them all, so a
+// change of palette or style is one command. Add a line there whenever you add a badge.
 //
 // Logos are fetched once per run from a pinned Simple Icons release; the SVGs are committed, so the README
 // depends on nothing at view time.
@@ -117,6 +120,7 @@ function render(title, items, paths, c) {
 function selfTest() {
   assert.deepEqual(item("react:React Native"), { logo: "react", label: "React Native" });
   assert.deepEqual(item("deck.gl"), { label: "deck.gl" });
+  assert.deepEqual(words('email "" gmail:a@b.c "react:React Native"'), ["email", "", "gmail:a@b.c", "react:React Native"]);
   assert.deepEqual(item("Keynote speaker: 3 congresses"), { label: "Keynote speaker: 3 congresses" });
   const one = render("", [{ label: "a<b" }], {}, PALETTE.light);
   assert.match(one.svg, /a&lt;b/);
@@ -133,12 +137,16 @@ function selfTest() {
   console.log("ok");
 }
 
-async function main([name, title, ...args]) {
-  if (name === "--test") return selfTest();
-  if (!name || title === undefined || !args.length || !/^[a-z0-9-]+$/.test(name)) {
-    console.error('usage: ./badge <name> <title> <item>...   (title "" for none; item "Label" or "logo:Label"; name in a-z, 0-9, -)');
-    process.exit(2);
-  }
+const USAGE = 'usage: ./badge <name> <title> <item>...   (title "" for none; item "Label" or "logo:Label"; name in a-z, 0-9, -)\n       ./badge --all             (every line of badges/badges.txt)\n       ./badge --test';
+
+/** One line of badges/badges.txt into arguments: words, or "quoted strings" (which may be empty). */
+function words(line) {
+  return [...line.matchAll(/"([^"]*)"|(\S+)/g)].map((m) => m[1] ?? m[2]);
+}
+
+/** Writes both themes of one badge and returns its <picture>. */
+async function generate(name, title, args) {
+  if (!name || title === undefined || !args.length || !/^[a-z0-9-]+$/.test(name)) throw new Error(USAGE);
   const items = args.map(item);
   const slugs = [...new Set(items.filter((i) => i.logo).map((i) => i.logo))];
   const paths = Object.fromEntries(await Promise.all(slugs.map(async (s) => [s, await logo(s)])));
@@ -149,13 +157,27 @@ async function main([name, title, ...args]) {
     writeFileSync(join(OUT, `${name}-${theme}.svg`), r.svg);
     alt = r.alt;
   }
-  console.log(`<picture>
+  return `<picture>
   <source media="(prefers-color-scheme: dark)" srcset="badges/${name}-dark.svg">
   <img src="badges/${name}-light.svg" alt="${esc(alt)}">
-</picture>`);
+</picture>`;
+}
+
+async function main(argv) {
+  if (argv[0] === "--test") return selfTest();
+  if (argv[0] === "--all") {
+    const lines = readFileSync(join(OUT, "badges.txt"), "utf8").split("\n").map((l) => l.trim()).filter((l) => l && !l.startsWith("#"));
+    for (const l of lines) {
+      const [name, title, ...args] = words(l);
+      await generate(name, title, args).catch((e) => Promise.reject(new Error(`badges.txt, "${name}": ${e.message}`)));
+    }
+    return console.log(`${lines.length} badges regenerated`);
+  }
+  const [name, title, ...args] = argv;
+  console.log(await generate(name, title, args));
 }
 
 main(process.argv.slice(2)).catch((e) => {
   console.error(e.message);
-  process.exit(1);
+  process.exit(e.message === USAGE ? 2 : 1);
 });

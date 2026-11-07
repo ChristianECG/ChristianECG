@@ -1,0 +1,19 @@
+# Every badge in the README, one per line, as arguments to ./badge: <name> <title> <item>...
+# Quote anything with spaces; "" is no title. `./badge --all` regenerates them all (after a palette change, say).
+
+# Stack
+frontend "Frontend" typescript:TypeScript react:React "react:React Native" nextdotjs:Next.js astro:Astro
+backend "Backend" nodedotjs:Node.js sqlite:SQLite mysql:MySQL
+dataviz "Data viz" apacheecharts:ECharts d3:D3.js deckgl:deck.gl
+tooling "Tooling" "tanstack:TanStack Query" jest:Jest eslint:ESLint claude:Claude
+
+# Research & community
+paper "Paper" "Security Issues of a Decentralized Blockchain-Based Messaging System · 2021"
+speaking "Speaking" "Keynote at 3 international congresses" "2 national TV appearances"
+community "Community" "google:Google DSC Lead · 2020–2021" "Mentor in tech communities"
+
+# Find me
+site "" astro:christianecg.com
+creu "" creu:creu.cat
+linkedin "" linkedin:LinkedIn
+email "" gmail:contacto@christianecg.com

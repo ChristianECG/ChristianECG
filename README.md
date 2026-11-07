@@ -14,22 +14,15 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 
 ---
 
-### 🛠️ Stack
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="badges/frontend-dark.svg"><img src="badges/frontend-light.svg" alt="Frontend: TypeScript, React, React Native, Next.js, Astro"></picture><br>
-<picture><source media="(prefers-color-scheme: dark)" srcset="badges/backend-dark.svg"><img src="badges/backend-light.svg" alt="Backend: Node.js, SQLite, MySQL"></picture><br>
-<picture><source media="(prefers-color-scheme: dark)" srcset="badges/dataviz-dark.svg"><img src="badges/dataviz-light.svg" alt="Data viz: ECharts, D3.js, deck.gl"></picture><br>
-<picture><source media="(prefers-color-scheme: dark)" srcset="badges/tooling-dark.svg"><img src="badges/tooling-light.svg" alt="Tooling: TanStack Query, Jest, ESLint, Claude"></picture>
-
----
-
 ### ⚡ Currently
 
 - 💼 &nbsp;Building software at **[Capital One](https://www.capitalone.com/tech/)** in a hybrid setup in Mexico City
-- 🔨 &nbsp;Shipping **[@avelor](https://avelor.es)** — a suite of 17 CLI tools for developers, on npm
+- 🔨 &nbsp;Shipping **[@avelor](https://avelor.es)** — small, sharp CLI tools for developers
 - 🎨 &nbsp;Running **[creu](https://creu.cat)** — my design & code studio
 - 🤖 &nbsp;Building MCP servers and wiring AI tooling into the engineering workflow
 - 📓 &nbsp;Publishing systems research and runtime investigations at **[octa.page](https://octa.page)**
+
+I also run a radio station with exactly one listener. When I'm tuned in, it says so:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://clacks.creu.cat/wwn.svg?theme=dark">
@@ -41,7 +34,7 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 ### 🚀 Projects
 
 **Developer tools**
-- **[Avelor](https://avelor.es)** — 17 CLI tools on npm: `mesh` (local HTTPS proxy), `floo` (SSH deploy agent), `bifrost` (WebSocket tunnel), `mira` (uptime monitor)
+- **[Avelor](https://avelor.es)** — 13 CLI tools on npm: `mesh` (local HTTPS proxy), `floo` (SSH deploy agent), `bifrost` (WebSocket tunnel), [`pyx`](https://github.com/avelor-es/pyx) (a server's `.env` without logging into the server)
 - **[mcp-rss](https://www.npmjs.com/package/@christianecg/mcp-rss)** — MCP server that exposes RSS and Atom feeds as tools for AI agents · TypeScript
 - **[Mayday](https://github.com/ChristianECG/mayday)** — Real-time incident collaboration rooms · Next.js · WebSockets
 
@@ -55,6 +48,15 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 - **[TuAgenda.digital](https://tuagenda.digital)** — Appointment automation SaaS with an AI WhatsApp agent · Next.js · Supabase · Stripe · Twilio
 - **[christianecg.com](https://christianecg.com)** — Portfolio and blog · Astro · Pagefind · Satori
 - **[octa.page](https://octa.page)** — Static engineering notebook. Architecture decisions made public.
+
+---
+
+### 🛠️ Stack
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/frontend-dark.svg"><img src="badges/frontend-light.svg" alt="Frontend: TypeScript, React, React Native, Next.js, Astro"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/backend-dark.svg"><img src="badges/backend-light.svg" alt="Backend: Node.js, SQLite, MySQL"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/dataviz-dark.svg"><img src="badges/dataviz-light.svg" alt="Data viz: ECharts, D3.js, deck.gl"></picture><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="badges/tooling-dark.svg"><img src="badges/tooling-light.svg" alt="Tooling: TanStack Query, Jest, ESLint, Claude"></picture>
 
 ---
 
