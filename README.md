@@ -42,6 +42,11 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 - 🤖 &nbsp;Building MCP servers and wiring AI tooling into the engineering workflow
 - 📓 &nbsp;Publishing systems research and runtime investigations at **[octa.page](https://octa.page)**
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://clacks.creu.cat/wwn.svg?theme=dark">
+  <img src="https://clacks.creu.cat/wwn.svg?theme=light" alt="Potterwatch: what is on air right now" width="480">
+</picture>
+
 ---
 
 ### 🚀 Projects
