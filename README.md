@@ -22,12 +22,14 @@ Outside of work, I build small, sharp tools for developers and publish the syste
 - 🤖 &nbsp;Building MCP servers and wiring AI tooling into the engineering workflow
 - 📓 &nbsp;Publishing systems research and runtime investigations at **[octa.page](https://octa.page)**
 
-I also run a radio station with exactly one listener. When I'm tuned in, it says so:
+I also run a radio station with exactly one listener. Every day it plans its own programming from my music library, in themed blocks, with a host over every intro and a news panel when I'm around. The **[agenda](https://potterwatch.ov.fyi/)** is public; when I'm tuned in, the card says what is on:
 
+<a href="https://potterwatch.ov.fyi/">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://clacks.creu.cat/wwn.svg?theme=dark">
   <img src="https://clacks.creu.cat/wwn.svg?theme=light" alt="Potterwatch: what is on air right now" width="480">
 </picture>
+</a>
 
 ---
 
